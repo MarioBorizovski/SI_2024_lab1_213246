@@ -1,0 +1,193 @@
+1. Инсталирање Git и креирање на профил на Github
+
+2. Менување на името на главната гранка на master 
+
+3. Креирање на remote репозиториум на Github со име SI_2023_lab1_213276
+
+4. Креирање на локален репозиториум и иницијализирање на .git со командата git init 
+
+5.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246
+$ git init
+Initialized empty Git repository in C:/Users/Astra/Desktop/SI_2024_lab1_213246/.git/
+
+6.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ notepad README.md
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git add README.md
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 17f7b1e] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+7.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git commit -m "Add starter code"
+[master 702a9b1] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+8.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin master
+
+9.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git branch bug1
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git branch bug2
+
+10.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git checkout bug1
+
+11.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ notepad SILab1_1.java
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 a5d56db] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+12.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+13.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ notepad SILab1_2.java
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 0039998] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+15.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ notepad SILab1Main.java
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 1027a4f] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+16.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+17.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ notepad SILab1Main.java
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 6c2520e] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+18.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git push origin bug1
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git push origin bug2
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git push origin master
+Everything up-to-date
+
+19.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+20.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git merge bug1
+
+21.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin master
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin bug1
+Everything up-to-date
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin bug2
+Everything up-to-date
+
+22. Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+23. Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git rebase master
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2|REBASE 2/2)
+$ notepad SILab1Main.java
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2|REBASE 2/2)
+$ git add .
+Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2|REBASE 2/2)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/bug2.
+
+24. Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+25. Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git merge bug2
+Updating 1027a4f..d8f1a7a
+Fast-forward
+ SILab1_2.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+26.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin --all
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/MarioBorizovski/SI_2024_lab1_213246.git
+   1027a4f..d8f1a7a  master -> master
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/MarioBorizovski/SI_2024_lab1_213246.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+27.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin bug2 --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MarioBorizovski/SI_2024_lab1_213246.git
+ + 6c2520e...d8f1a7a bug2 -> bug2 (forced update)
+
+28.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ notepad logs.txt
+$ git add .
+$ git commit -m "Final commit"
+
+29.Astra@FRiCKO MINGW64 ~/Desktop/SI_2024_lab1_213246 (master)
+$ git push origin --all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
